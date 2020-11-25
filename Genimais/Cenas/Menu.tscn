@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Cenas/Button.gd" type="Script" id=1]
+[ext_resource path="res://Assets/TelaInicial.png" type="Texture" id=2]
+
+[node name="Menu" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 424.0
+margin_top = 202.119
+margin_right = 606.0
+margin_bottom = 373.119
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
